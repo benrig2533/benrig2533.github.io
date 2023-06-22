@@ -1,12 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
     <meta charset="utf-8">
     <title>form spedizione</title>
 </head>
 <body>
-  <form>
-    <input type="text" name="name" placeholder="Nome">
-  </form>
+  
+  <table>
+
+    <form method="get" action="" id="delivery" autocomplete="on"> <!--in action mettiamo un lik-->
+      
+      <tr>
+        <th>Campo</th>
+        <th>Input</th>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="name">Nome</label>
+        </td>
+        <td>
+          <input id="name" type="text" name="name" placeholder="Nome" placeholder="" required>
+        </td>
+      </tr>
+  
+      <tr>
+        <td>
+          <label for="lastname">Cognome</label>
+        </td>
+        <td>
+          <input id="lastname" type="text" name="lastname" placeholder="Cognome" required>
+        </td>
+      </tr>
+  
+      <tr>
+        <td>
+          <label for="address">Indirizzo</label>
+        </td>
+        <td>
+          <input id="address" type="text" name="address" placeholder="Via" required>
+        </td>
+      </tr>
+  
+      <tr>
+        <td>
+          <label for="po">Civico</label>
+        </td>
+        <td>
+          <input id="po" type="number" name="po" placeholder="1">
+        </td>
+      </tr>
+  
+      <tr>
+        <td>
+          <label for="cap">Cap</label>
+        </td>
+        <td>
+          <input id="cap" type="number" name="cap" placeholder="00000">
+        </td>
+      </tr>
+  
+      <tr>
+        <td>
+          <label for="proinces">Province</label>
+        </td>
+        <td>
+          <!--le provincie sono codificate, cioè sono un numero limitato e si possono conoscere tutte, allore uso la select-->
+          <select name="provinces" id="province">
+            <option value="PA">Palermo</option>
+            <option value="MI">Milano</option>
+            <option value="TO">Torino</option>
+            <option value="RO">Roma</option>
+            <option value="OTHER">Altro</option>
+          </select>
+        </td>
+      </tr>
+  
+      <tr>
+        <td>
+          <label for="city">Città</label>
+        </td>
+        <td>
+          <input id="city" type="text" name="city" placeholder="Roma">
+        </td>
+      </tr>
+  
+      <tr>
+        <td>
+          <label for="country">Nazione</label>
+        </td>
+        <td> 
+          <input id="country" type="text" name="country" placeholder="Italia" required>
+        </td>
+      </tr>
+  
+      <tr>
+        <td>
+          <label for="phone">Telefono</label>
+        </td>
+        <td>
+          <input id="phone" type="tel" name="phone" placeholder="+39 3330000000">
+        </td>
+      </tr>
+  
+      <tr>
+        <td>
+          <label for="email">Email</label>
+        </td>
+        <td>
+          <input id="email" type="email" name="email" placeholder="tua@email.it" required>
+        </td>
+      </tr>
+  
+      <tr>
+        <td>
+          <label for="note">Note</label>
+        </td>
+        <td>
+          <textarea name="note" id="note" cols="30" rows="10" placeholder="Note"></textarea>
+        </td>
+      </tr>
+  
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="Invia">
+        </td>
+      </tr>
+    </form>
+
+  </table>
+  
+  <button type="reset">Reset</button>
+
+<!--Adesso utilizziamo div e e style per creare la stessa formattazione in tabella-->
+
+
+<form method="get" action="" id="delivery" autocomplete="on"> <!--in action mettiamo un lik-->
+      
+  <div>
+    <div>Campo</div>
+    <div>Input</div>
+  </div>
+    
+
+  <div>
+    <div><label for="name">Nome</label></div>
+    <div><input id="name" type="text" name="name" placeholder="Nome" placeholder="" required></div>
+  </div>
+
+  <div>
+    <span><label for="lastname">Cognome</label></span>
+    <span><input id="lastname" type="text" name="lastname" placeholder="Cognome" required></span>
+  </div>
+</form>
+
+
 </body>
 </html>
